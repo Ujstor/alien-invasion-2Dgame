@@ -18,13 +18,13 @@ class Ship:
         self.x = float(self.rect.x)
 
         # Movement flag
-        self.moving_rigt = False
+        self.moving_right = False
         self.moving_left = False
 
     def update(self):
         """Update ship's position based on the movment flag"""
         # Update ship's x value, not the rect
-        if self.moving_rigt and self.rect.right < self.screen_rect.right:
+        if self.moving_right and self.rect.right < self.screen_rect.right:
             self.x += self.settings.ship_speed
         if self.moving_left and self.rect.left > 0:
             self.x -= self.settings.ship_speed
