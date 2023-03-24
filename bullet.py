@@ -11,16 +11,16 @@ class Bullet(Sprite):
         self.settings = ai_game.settings
         self.color = self.settings.bullet_color
 
-        #create bullet rect at (0,0) and then set correct position
+        # create bullet rect at (0,0) and then set correct position
         self.rect = pygame.Rect(0, 0, self.settings.bullet_width, self.settings.bullet_height)
         self.rect.midtop = ai_game.ship.rect.midtop
 
-        #Store the bullet's position as a decimal value
+        # Store the bullet's position as a decimal value
         self.y = float(self.rect.y)
 
     def update(self):
-        """Move the bullet up the screen"""git 
-        #update decimal position of the bullet
+        """Move the bullet up the screen"""
+        # update decimal position of the bullet
         self.y -= self.settings.bullet_speed
         #update rect position
         self.rect.y = self.y
